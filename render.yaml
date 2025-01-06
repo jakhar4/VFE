@@ -1,0 +1,9 @@
+# render.yaml
+services:
+  - type: web
+    name: fastapi-video-frame-extractor
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "pip install --upgrade pip && pip install -r requirements.txt"
+    startCommand: "uvicorn fastapi_app:app --host 0.0.0.0 --port $PORT"
