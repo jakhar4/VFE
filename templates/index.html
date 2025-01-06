@@ -50,15 +50,15 @@
 {% if frames %}
 <form id="framesForm">
   <div class="frame-container">
-  {% for filename in frames %}
+    {% for filename in frames %}
     <div class="frame-item">
-      <img src="/frames/{{ filename }}" alt="{{ filename }}" />
+      <img src="/frames/{{ filename }}" alt="{{ filename }}" onclick="toggleCheckbox(this)" />
       <label>
         <input type="checkbox" name="filenames" value="{{ filename }}" />
         {{ filename }}
       </label>
     </div>
-  {% endfor %}
+{% endfor %}
   </div>
 
   <button type="button" onclick="downloadZip()">Download Selected as ZIP</button>
@@ -69,6 +69,10 @@
 {% endif %}
 
 <script>
+  function toggleCheckbox(img) {
+  const checkbox = img.nextElementSibling.querySelector('input[type="checkbox"]');
+  checkbox.checked = !checkbox.checked; // Toggle the checkbox state
+}
 async function downloadZip() {
   const form = document.getElementById('framesForm');
   const formData = new FormData(form);
