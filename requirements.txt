@@ -1,0 +1,14 @@
+altgraph==0.17.4
+colour==0.1.5
+ffmpeg-python==0.2.0
+future==1.0.0
+macholib==1.16.3
+modulegraph==0.19.6
+packaging==24.2
+Pillow==9.5.0
+py2app==0.28.8
+pyinstaller==6.11.1
+pyinstaller-hooks-contrib==2024.11
+pyparsing==3.2.1
+tk==0.1.0
+tkmacosx==1.0.5
