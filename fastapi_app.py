@@ -22,9 +22,6 @@ from PIL import Image
 
 app = FastAPI()
 
-# Mount static directory if you have one
-app.mount("/static", StaticFiles(directory="static"), name="static")
-
 templates = Jinja2Templates(directory="templates")
 
 OUTPUT_DIR = "output_frames"
